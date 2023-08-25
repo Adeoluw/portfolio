@@ -61,21 +61,21 @@ window.addEventListener("scroll", () => {
          heroImg.style.transform = "translateX(0)";
     }
 
-    if (Y >= 625) {
-        htmlDiv.style.transform = "translateX(0px)"
-        htmlDiv.style.transition = "all 1s"
+if (Y >= 625 && Y <= 1650) {
+  htmlDiv.style.transform = "translateX(0px)";
+  htmlDiv.style.transition = "all 1s";
+} else {
+  htmlDiv.style.transform = "translateX(-800px)";
+}
 
-    } else if (Y <= 625) {
-         htmlDiv.style.transform = "translateX(-800px)";
-    }
 
-    if (Y >= 625) {
-        cssDiv.style.transform = "translateX(0px)"
-        cssDiv.style.transition = "all 1s"
+ if (Y >= 625 && Y <= 1650) {
+   cssDiv.style.transform = "translateX(0px)";
+   cssDiv.style.transition = "all 1s";
+ } else {
+   cssDiv.style.transform = "translateX(800px)";
+ }
 
-    } else if (Y <= 625) {
-         cssDiv.style.transform = "translateX(800px)";
-    }
 
 
     if (Y >= 250) {

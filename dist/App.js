@@ -78,17 +78,35 @@ if (Y >= 625 && Y <= 1650) {
 
 
 
-    if (Y >= 250) {
-      jsDiv.classList.add("animate-js");
-    } else {
-      jsDiv.classList.remove("animate-js");
-    }
+ if (Y >= 250 && Y <= 1220) {
+   jsDiv.style.transform = "translateX(-50%)";
+   jsDiv.style.transition = "all 1s";
+ } else {
+   jsDiv.style.transform = "translateX(1000px)";
+ }
+
+    
+    
+    // if (Y >= 250) {
+    //   jsDiv.classList.add("animate-js");
+    // } else {
+    //   jsDiv.classList.remove("animate-js");
+    // }
 
 
-    if (Y >= 1290) {
-      reactDiv.classList.add("animate-js");
-    } else {
-      reactDiv.classList.remove("animate-js");
-    }
+ if (Y >= 1120 && Y <= 2240) {
+   reactDiv.style.transform = "translateX(-50%)";
+   reactDiv.style.transition = "all 1s";
+ } else {
+   reactDiv.style.transform = "translateX(-1000px)";
+ }
+
+
+
+    // if (Y >= 1290) {
+    //   reactDiv.classList.add("animate-js");
+    // } else {
+    //   reactDiv.classList.remove("animate-js");
+    // }
 
 })

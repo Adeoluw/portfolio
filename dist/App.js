@@ -16,6 +16,31 @@ const news = document.getElementById("news-div")
 const flyo = document.getElementById("flyo-div")
 const intro = document.getElementById("intro-div")
 
+const openMenu = document.getElementById("open-menu");
+const navigation = document.querySelector("nav")
+const closeMenu = document.getElementById("close-menu")
+const navList = document.getElementById("nav-list")
+
+openMenu.addEventListener("click", () => {
+  navigation.style.height = "100px"
+  navigation.style.opacity = "1"
+  navList.style.pointerEvents = "auto"
+  navigation.classList.add("animate-nav")
+
+  // navigation.style.bottom ="-30px"
+})
+
+closeMenu.addEventListener("click", () => {
+  navigation.style.height = "0"
+  navigation.style.opacity = "0"
+  navList.style.pointerEvents = "none"
+  navigation.classList.remove("animate-nav");
+
+
+  // navigation.style.bottom ="-30px"
+})
+
+
 
 
 window.addEventListener("scroll", () => {

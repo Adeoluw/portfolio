@@ -45,7 +45,7 @@ closeMenu.addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
     let Y = window.scrollY
-    console.log(Y);
+    console.log(Y); 
 
     if (Y >= 500) {
         htmlDiv.classList.add("animate-html");

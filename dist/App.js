@@ -22,7 +22,7 @@ const closeMenu = document.getElementById("close-menu")
 const navList = document.getElementById("nav-list")
 
 openMenu.addEventListener("click", () => {
-  navigation.style.height = "100px"
+  navigation.style.height = "150px"
   navigation.style.opacity = "1"
   navList.style.pointerEvents = "auto"
   navigation.classList.add("animate-nav")

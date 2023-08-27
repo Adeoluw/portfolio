@@ -9,13 +9,12 @@ const heroText = document.getElementById("hero-text")
 const heroButton = document.getElementById("hero-button")
 const heroImg = document.getElementById("hero-img")
 
-const projectDiv = document.getElementById("project-div");
-const projectText = document.getElementById("project-text")
-
-// projectDiv.addEventListener("mouseover", () => {
-//     projectText.style.transform = "()"
-//     projectDiv.style.transition = "all 1s"
-// })
+const shoes = document.getElementById("shoes-div")
+const sunny = document.getElementById("sunny-div")
+const youtube = document.getElementById("youtube-div")
+const news = document.getElementById("news-div")
+const flyo = document.getElementById("flyo-div")
+const intro = document.getElementById("intro-div")
 
 
 
@@ -102,11 +101,31 @@ if (Y >= 625 && Y <= 1650) {
  }
 
 
+  if (Y >= 2000) {
+    shoes.style.transform = "translateX(0)";
+    shoes.style.transition = "all .5s";
+    youtube.style.transform = "translateX(0)";
+    youtube.style.transition = "all 1s";
+    flyo.style.transform = "translateX(0)";
+    flyo.style.transition = "all 1.5s";
+    
+ } else {
+    shoes.style.transform = "translateX(-450px)";
+    youtube.style.transform = "translateX(-450px)";
+    flyo.style.transform = "translateX(-450px)";
+    
+  }
 
-    // if (Y >= 1290) {
-    //   reactDiv.classList.add("animate-js");
-    // } else {
-    //   reactDiv.classList.remove("animate-js");
-    // }
-
+  if (Y >= 2000) {
+    sunny.style.transform = "translateX(0)";
+   sunny.style.transition = "all .5s";
+    news.style.transform = "translateX(0)";
+   news.style.transition = "all 1s";
+    intro.style.transform = "translateX(0)";
+   intro.style.transition = "all 1.5s";
+ } else {
+   sunny.style.transform = "translateX(450px)";
+   news.style.transform = "translateX(450px)";
+   intro.style.transform = "translateX(450px)";
+  }
 })

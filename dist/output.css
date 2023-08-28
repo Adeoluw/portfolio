@@ -942,11 +942,6 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1133,6 +1128,10 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:pointer-events-auto {
+    pointer-events: auto;
+  }
+
   .sm\:relative {
     position: relative;
   }
@@ -1141,16 +1140,78 @@ video {
     margin-left: auto;
   }
 
+  .sm\:mr-24 {
+    margin-right: 6rem;
+  }
+
+  .sm\:inline-block {
+    display: inline-block;
+  }
+
+  .sm\:inline {
+    display: inline;
+  }
+
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:h-auto {
+    height: auto;
+  }
+
+  .sm\:h-20 {
+    height: 5rem;
   }
 
   .sm\:w-1\/2 {
     width: 50%;
   }
 
+  @keyframes nav {
+    0%  {
+      transform: translateY(-200px);
+    }
+
+    50% {
+      transform: translateY(30px);
+    }
+
+    75% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .sm\:animate-nav {
+    animation: nav 1s ease-in-out 1;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-end {
+    align-items: flex-end;
+  }
+
+  .sm\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .sm\:border {
+    border-width: 1px;
+  }
+
+  .sm\:border-0 {
+    border-width: 0px;
+  }
+
+  .sm\:bg-transparent {
+    background-color: transparent;
   }
 
   .sm\:p-20 {
@@ -1168,5 +1229,24 @@ video {
 
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:align-bottom {
+    vertical-align: bottom;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:opacity-100 {
+    opacity: 1;
+  }
+
+  .sm\:shadow-none {
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }

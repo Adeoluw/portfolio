@@ -85,27 +85,35 @@ window.addEventListener("scroll", () => {
          heroImg.style.transform = "translateX(0)";
     }
     
-    if ( window.innerWidth < 641) {
+    if ( window.innerWidth < 641 && Y >= 1500 && Y <= 2200)  {
       htmlDiv.style.transform = "translateX(0px)";
       htmlDiv.style.transition = "all 1s";
+    } else if (Y < 1500 || Y > 2200) {
+      htmlDiv.style.transform = "translateX(500px)"
     }
     
-    if ( window.innerWidth < 641) {
+    if (window.innerWidth < 641 && Y >= 1896 && Y <= 2590) {
       cssDiv.style.transform = "translateX(0px)";
       cssDiv.style.transition = "all 1s";
+    } else if (Y < 1696 || Y > 2390) {
+      cssDiv.style.transform = "translateX(500px)";
     }
     
-    if ( window.innerWidth < 641) {
+    if (window.innerWidth < 641 && Y >= 1696 && Y <= 2596) {
       jsDiv.style.transform = "translateX(0px)";
       jsDiv.style.transition = "all 1s";
+    } else if (Y < 1896 || Y > 2596) {
+      jsDiv.style.transform = "translateX(-500px)";
     }
     
-    if ( window.innerWidth < 641) {
+    if (window.innerWidth < 641 && Y >= 2096 && Y <= 2896) {
       reactDiv.style.transform = "translateX(0px)";
       reactDiv.style.transition = "all 1s";
+    } else if (Y < 2096 || Y > 2896) {
+      reactDiv.style.transform = "translateX(-500px)";
     }
     
-    
+    // more than 640px animations
     if (Y >= 625 && Y <= 1650 && window.innerWidth > 640) {
       htmlDiv.style.transform = "translateX(0px)";
       htmlDiv.style.transition = "all 1s";

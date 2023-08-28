@@ -70,71 +70,79 @@ window.addEventListener("scroll", () => {
     }
 
     if (Y >= 400) {
-        heroButton.style.transform = "translateX(-500px)"
+        heroButton.style.transform = "translateX(-600px)"
         heroButton.style.transition = "all 1.5s"
 
     } else if (Y <= 450) {
          heroButton.style.transform = "translateX(0)";
     }
 
-    if (Y >= 210) {
+    if (Y >= 210 && window.innerWidth > 1024) {
         heroImg.style.transform = "translateX(800px)"
         heroImg.style.transition = "all .5s"
 
-    } else if (Y <= 330) {
-         heroImg.style.transform = "translateX(0)";
+    } else if (Y <= 330 && window.innerWidth > 1024) {
+      heroImg.style.transform = "translateX(0)";
+    }
+    // Hero image animation for less than 1024
+    if (Y >= 1100 && window.innerWidth <= 1024) {
+        heroImg.style.transform = "translateX(800px)"
+        heroImg.style.transition = "all .5s"
+
+    } else if (Y <= 700 && window.innerWidth <= 1024) {
+      heroImg.style.transform = "translateX(0)";
     }
     
-    if ( window.innerWidth < 641 && Y >= 1500 && Y <= 2200)  {
+    if ( window.innerWidth < 1025 && Y >= 1500 && Y <= 2200)  {
       htmlDiv.style.transform = "translateX(0px)";
       htmlDiv.style.transition = "all 1s";
     } else if (Y < 1500 || Y > 2200) {
       htmlDiv.style.transform = "translateX(500px)"
     }
     
-    if (window.innerWidth < 641 && Y >= 1896 && Y <= 2590) {
+    if (window.innerWidth < 1025 && Y >= 1896 && Y <= 2590) {
       cssDiv.style.transform = "translateX(0px)";
       cssDiv.style.transition = "all 1s";
     } else if (Y < 1696 || Y > 2390) {
       cssDiv.style.transform = "translateX(500px)";
     }
     
-    if (window.innerWidth < 641 && Y >= 1696 && Y <= 2596) {
+    if (window.innerWidth < 1025 && Y >= 1696 && Y <= 2596) {
       jsDiv.style.transform = "translateX(0px)";
       jsDiv.style.transition = "all 1s";
     } else if (Y < 1896 || Y > 2596) {
       jsDiv.style.transform = "translateX(-500px)";
     }
     
-    if (window.innerWidth < 641 && Y >= 2096 && Y <= 2896) {
+    if (window.innerWidth < 1025 && Y >= 2096 && Y <= 2896) {
       reactDiv.style.transform = "translateX(0px)";
       reactDiv.style.transition = "all 1s";
     } else if (Y < 2096 || Y > 2896) {
       reactDiv.style.transform = "translateX(-500px)";
     }
     
-    // more than 640px animations
-    if (Y >= 625 && Y <= 1650 && window.innerWidth > 640) {
+    // less than 1024 animations
+    if (Y >= 625 && Y <= 1650 && window.innerWidth > 1024) {
       htmlDiv.style.transform = "translateX(0px)";
       htmlDiv.style.transition = "all 1s";
-    } else if (window.innerWidth > 640 && Y <= 625 && Y >= 1650) {
+    } else if (window.innerWidth > 1024 && Y <= 625 && Y >= 1650) {
       htmlDiv.style.transform = "translateX(-800px)";
     }
   
 
-    if (Y >= 625 && Y <= 1650 && window.innerWidth > 640) {
+    if (Y >= 625 && Y <= 1650 && window.innerWidth > 1024) {
    cssDiv.style.transform = "translateX(0px)";
    cssDiv.style.transition = "all 1s";
- } else if (window.innerWidth > 640 && Y <= 625 && Y >= 1650) {
+ } else if (window.innerWidth > 1024 && Y <= 625 && Y >= 1650) {
    cssDiv.style.transform = "translateX(800px)";
  }
 
 
 
- if (Y >= 250 && Y <= 1220 && window.innerWidth > 640) {
+ if (Y >= 250 && Y <= 1220 && window.innerWidth > 1024) {
    jsDiv.style.transform = "translateX(-50%)";
    jsDiv.style.transition = "all 1s";
- } else if (window.innerWidth > 640 && Y <= 250 && Y >= 1220) {
+ } else if (window.innerWidth > 1024 && Y <= 250 && Y >= 1220) {
    jsDiv.style.transform = "translateX(1000px)";
  }
 
@@ -147,10 +155,10 @@ window.addEventListener("scroll", () => {
     // }
 
 
- if (Y >= 1120 && Y <= 2240 && window.innerWidth > 640) {
+ if (Y >= 1120 && Y <= 2240 && window.innerWidth > 1024) {
    reactDiv.style.transform = "translateX(-50%)";
    reactDiv.style.transition = "all 1s";
- } else if (window.innerWidth > 640 && Y <= 1220 && Y >= 2240) {
+ } else if (window.innerWidth > 1024 && Y <= 1220 && Y >= 2240) {
    reactDiv.style.transform = "translateX(-1000px)";
  }
 
@@ -187,7 +195,7 @@ window.addEventListener("scroll", () => {
 function handleAnimations() {
   let screenWidth = window.innerWidth
 
-  if (screenWidth < 641) {
+  if (screenWidth < 1025) {
     htmlDiv.style.transform = "translateX(0)"
     jsDiv.style.transform = "translateX(0)"
     cssDiv.style.transform = "translateX(0)"

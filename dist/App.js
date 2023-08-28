@@ -97,7 +97,7 @@ window.addEventListener("scroll", () => {
       htmlDiv.style.transform = "translateX(0px)";
       htmlDiv.style.transition = "all 1s";
     } else if (Y < 1500 || Y > 2200) {
-      htmlDiv.style.transform = "translateX(500px)"
+      htmlDiv.style.transform = "translateX(-500px)"
     }
     
     if (window.innerWidth < 1025 && Y >= 1896 && Y <= 2590) {
@@ -121,6 +121,39 @@ window.addEventListener("scroll", () => {
       reactDiv.style.transform = "translateX(-500px)";
     }
     
+  
+  // Greater than 1024 and less than 1370
+   if (Y >= 625 && Y <= 1650 && window.innerWidth < 1370  ) {
+     htmlDiv.style.transform = "translateX(0px)";
+     htmlDiv.style.left = "0";
+     htmlDiv.style.transition = "all 1s";
+   } else if (window.innerWidth < 1370  && Y <= 625 && Y >= 1650) {
+     htmlDiv.style.transform = "translateX(-800px)";
+   }
+
+   if (Y >= 625 && Y <= 1650 && window.innerWidth < 1370 ) {
+     cssDiv.style.transform = "translateX(0px)";
+      cssDiv.style.right = "0";
+     cssDiv.style.transition = "all 1s";
+   } else if (window.innerWidth < 1370  && Y <= 625 && Y >= 1650) {
+     cssDiv.style.transform = "translateX(800px)";
+   }
+
+   if (Y >= 250 && Y <= 1220 && window.innerWidth < 1370 ) {
+     jsDiv.style.transform = "translateX(-50%)";
+     jsDiv.style.transition = "all 1s";
+   } else if (window.innerWidth < 1370  && Y <= 250 && Y >= 1220) {
+     jsDiv.style.transform = "translateX(1000px)";
+   }
+
+
+   if (Y >= 1120 && Y <= 2240 && window.innerWidth < 1370 ) {
+     reactDiv.style.transform = "translateX(-50%)";
+     reactDiv.style.transition = "all 1s";
+   } else if (window.innerWidth < 1370  && Y <= 1220 && Y >= 2240) {
+     reactDiv.style.transform = "translateX(-1000px)";
+   }
+  
     // less than 1024 animations
     if (Y >= 625 && Y <= 1650 && window.innerWidth > 1024) {
       htmlDiv.style.transform = "translateX(0px)";

@@ -46,12 +46,12 @@ const skills = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("translate-x-0", "opacity-100");
-        entry.target.classList.remove("-translate-x-16"); // Remove the negative sign
+        entry.target.classList.remove("-translate-x-10"); // Remove the negative sign
         entry.target.style.transition = "all 1.2s";
 
       } else {
         entry.target.classList.remove("translate-x-0", "opacity-100");
-        entry.target.classList.add("-translate-x-16");
+        entry.target.classList.add("-translate-x-10");
         entry.target.style.transition = "all 1.2s";
 
       }
@@ -59,8 +59,7 @@ const skills = new IntersectionObserver(
     });
   },
   {
-    threshold: 1,
-    rootMargin: "100px"
+    threshold: .5,
   }
 );
 
@@ -86,7 +85,7 @@ const rightSkills = new IntersectionObserver(
     });
   },
   {
-    threshold: 1,
+    threshold: .5,
   }
 );
 

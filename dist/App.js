@@ -27,8 +27,11 @@ openMenu.addEventListener("click", () => {
   navigation.style.opacity = "1";
   navList.style.pointerEvents = "auto";
   navigation.classList.add("animate-nav");
+  openMenu.style.zIndex = "-1"
 
   // navigation.style.bottom ="-30px"
+
+  console.log("hello")
 });
 
 closeMenu.addEventListener("click", () => {
@@ -36,6 +39,7 @@ closeMenu.addEventListener("click", () => {
   navigation.style.opacity = "0";
   navList.style.pointerEvents = "none";
   navigation.classList.remove("animate-nav");
+  openMenu.style.zIndex = "100"
   
   // navigation.style.bottom ="-30px"
 });

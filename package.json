@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss build -i src/input.css -o dist/output.css",
+    "dev": "tailwindcss build -i src/input.css -o dist/output.css --watch",
+    "start": "npm run dev"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.4.3"
   }
 }
